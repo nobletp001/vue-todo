@@ -43,6 +43,7 @@ const deleteTodo = (todo) => {
     <ul class="todo-list" v-if="todoList.length > 0">
       <TodoItem
         v-for="(todo, index) in todoList"
+        :key="index"
         :todo="todo"
         :index="index"
         @edit-todo="toggleEditTodo"
